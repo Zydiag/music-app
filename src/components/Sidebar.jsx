@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { RiCloseLine } from 'react-icons/ri';
 import { HiOutlineMenu } from 'react-icons/hi';
 
@@ -14,6 +14,7 @@ const NavLinks = (handleClick) => (
         to={item.to}
         className="flex flex-row justify-start items-center text-sm my-8 font-medium text-gray-400 hover:text-cyan-400"
         onClick={() => {
+          // eslint-disable-next-line no-unused-expressions
           handleClick && handleClick();
         }}
       >
@@ -29,7 +30,9 @@ const Sidebar = () => {
   return (
     <>
       <div className="md:flex hidden flex-col w-[240px] py-10 px-4 bg-[#191624]">
-        <img src={logo} alt="logo" className="w-full h-14 object-contain" />
+        <Link to="/">
+          <img src={logo} alt="logo" className="w-full h-14 object-contain" />
+        </Link>
         <NavLinks />
       </div>
       {/* //Mobile menu */}
@@ -54,7 +57,7 @@ const Sidebar = () => {
         }`}
       >
         <img src={logo} alt="logo" className="w-full h-14 object-contain" />
-        <NavLinks handleClick={() => setMobileMenuOpen(false)}/>
+        <NavLinks handleClick={() => setMobileMenuOpen(false)} />
       </div>
     </>
   );

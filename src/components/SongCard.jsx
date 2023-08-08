@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-shadow */
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 

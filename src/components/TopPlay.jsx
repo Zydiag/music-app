@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 /* eslint-disable import/named */
 /* eslint-disable no-unused-vars */
 import { useEffect, useRef, userRef } from 'react';
@@ -49,6 +50,7 @@ const TopChartCard = ({
   </div>
 );
 
+// eslint-disable-next-line consistent-return
 const TopPlay = () => {
   const dispatch = useDispatch();
   const { activeSong, isPlaying } = useSelector((state) => state.player);
